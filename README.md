@@ -7,15 +7,15 @@
 3. 我们为本系统编写了用例文档、需求规格描述文档、体系结构描述文档、详细设计文档，均在文件夹文档中
 4. 我们为本系统编写了一些前后端的测试用例，并附上测试代码和前后端测试文档
 
-
+<br>
 
 ## 项目部署示例
 
 示例所用为MacBook Pro和IDEA 2020.1.2
 
+<br>
 
-
-**下载项目**
+### 下载项目
 
 从本仓库克隆代码至本地文件夹
 
@@ -23,9 +23,9 @@
 git clone https://github.com/Condorcyh/SEECII_cooperation.git
 ```
 
+<br>
 
-
-**导入项目**
+### 导入项目
 
 打开IDEA，选择 Open or Import（低版本选择Import Project），导入项目
 
@@ -35,9 +35,9 @@ git clone https://github.com/Condorcyh/SEECII_cooperation.git
 
 提示：需要安装Lombok插件
 
+<br>
 
-
-**部署数据库**
+### 部署数据库
 
 打开终端，启动数据库
 
@@ -67,9 +67,9 @@ create databases hotel;
 
 输入exit退出数据库
 
+<br>
 
-
-**在IDEA里连接数据库**
+### 在IDEA里连接数据库
 
 点击右边的数据库，点击+，选择Data Source—MySQL
 
@@ -91,7 +91,7 @@ create databases hotel;
 
 这样数据库就连接好了
 
-
+<br>
 
 现在打开src/main/resources/application.yml文件，将里面的数据库密码改成自己的密码
 
@@ -99,9 +99,9 @@ create databases hotel;
 
 到这里后端就全部配置完毕了
 
+<br>
 
-
-**前端配置**
+### 前端配置
 
 打开IDEA最下面一栏的Terminal，输入以下命令
 
@@ -114,7 +114,7 @@ npm install
 
 有可能会安装失败，那就再装一次呗
 
-
+<br>
 
 安装成功后，执行
 
@@ -124,9 +124,9 @@ npm run serve
 
 前端即开始运行
 
+<br>
 
-
-**打开网站**
+### 打开网站
 
 打开浏览器输入网址localhost:8000
 
