@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.hotel.data.coupon.CouponMapper">
+
+    <insert id="insertCoupon" parameterType="com.example.hotel.po.Coupon"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into Coupon(description,couponName,target_money,target_room, discount_money,start_time,end_time,hotelId,couponType,discount,status,coopEnterprise,target_vip)
+        values(#{description},#{couponName},#{targetMoney},#{targetRoom},#{discountMoney},#{startTime},#{endTime},#{hotelId},#{couponType},#{discount},#{status},#{coopEnterprise},#{targetVip})
+    </insert>
+
+    <select id="selectByHotelId" resultMap="Coupon">
+        select * from Coupon where hotelId=#{hotelId}
+    </select>
+
+    <delete id="deleteCoupon">
+        delete from Coupon where id=#{id} and hotelId=#{hotelId}
+    </delete>
+
+    <resultMap id="Coupon" type="com.example.hotel.po.Coupon">
+        <result column="description" property="description"></result>
+        <result column="id" property="id"></result>
+        <result column="couponName" property="couponName"></result>
+        <result column="hotelId" property="hotelId"></result>
+        <result column="couponType" property="couponType"></result>
+        <result column="discount" property="discount"></result>
+        <result column="status" property="status"></result>
+        <result column="target_money" property="targetMoney"></result>
+        <result column="target_room" property="targetRoom"></result>
+        <result column="discount_money" property="discountMoney"></result>
+        <result column="start_time" property="startTime"></result>
+        <result column="end_time" property="endTime"></result>
+        <result column="coopEnterprise" property="coopEnterprise"></result>
+        <result column="target_vip" property="targetVip"></result>
+    </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.hotel.data.vipInfo.VipInfoMapper">
+
+    <update id="updateVipInfo">
+        update vipinfo set vip1=#{vip1},vip2=#{vip2},vip3=#{vip3},vip4=#{vip4}
+        where id=#{id}
+    </update>
+
+    <select id="selectById" resultMap="VipInfo">
+        select * from vipinfo where id=#{id}
+    </select>
+    
+    <resultMap id="VipInfo" type="com.example.hotel.po.VipInfo">
+    </resultMap>
+
+
+</mapper>
